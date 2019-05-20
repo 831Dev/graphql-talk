@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/sky.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <center>
+                    <img data-src="img/graphql-dotnet.png"
+                        style="margin: 15px 0;background: none; border: none; box-shadow: none;" class="no-border">
+                </center>
+                <h3>Roll your own GraphQL Backend</h3>
+                <h5>Talk:
+                    <a href="https://github.com/831Dev/graphql-talk" target="_blank">
+                        https://github.com/831Dev/graphql-talk
+                    </a>
+                </h5>
+            </section>
+
+            <section>
+
+                <h2>GraphQL 101</h2>
+                <ul>
+                    <li>GraphQL is a query language for your API</li>
+                    <li>Similar to OData</li>
+                    <li>Developed at Facebook</li>
+                    <li>https://graphql.org/code/</li>
+                </ul>
+
+                <center>
+                    <img data-src="img/example.png"
+                        style="margin: 15px 0;background: none; border: none; box-shadow: none;" class="no-border">
+                </center>
+
+            </section>
+
+            <section>
+                <h2>GraphQL vs REST</h2>
+                <center>
+                    <img data-src="img/multiple_requests.png"
+                        style="margin: 15px 0;background: none; border: none; box-shadow: none;" class="no-border">
+                </center>
+            </section>
+
+            <section>
+                <h2>GraphQL vs OData vs ORDS</h2>
+                <center>
+                    <img data-src="img/query-capabilities.jpg"
+                        style="margin: 15px 0;background: none; border: none; box-shadow: none;" class="no-border">
+                </center>
+            </section>
+
+            <section>
+                <h2>What are we building?</h2>
+
+                <img data-src="img/Construction.png" height="150"
+                    style="margin: 15px 0;background: none; border: none; box-shadow: none;" class="no-border">
+
+                <ul>
+                    <li>GraphQL Endpoint that allows the client to call and shape the
+                        stats for a player(s) at Water City Roller Hockey</li>
+                    <li>Move away from REST based endpoints</li>
+                </ul>
+                <br><br>
+                <div style="background-color: #444444;color: #fff;">
+                    <code>
+                        /api/hockey/member/{memberId}/teams
+                        /api/hockey/team/{playerId}/games
+                        /api/hockey/game/{gameId}
+                    </code>
+                </div>
+
+            </section>
+
+            <section>
+                <h2>BackEnd Technology</h2>
+                <ul>
+                    <li>Visual Studio </li>
+                    <li>DotNet Core</li>
+                    <li>ORM: Entity Framework</li>
+                    <li>Driver: graphql-dotnet <br />
+                        <a href="https://github.com/graphql-dotnet/graphql-dotnet" target="_blank">
+                            https://github.com/graphql-dotnet/graphql-dotnet
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>graphql-dotnet</h2>
+                <pre>
+                <code>
+                    public class GraphQLQuery
+                    {
+                        public string OperationName { get; set; }
+                        public string NamedQuery { get; set; }
+                        public string Query { get; set; }
+                        public JObject Variables { get; set; }
+                    }
+                </code>
+            </pre>
+
+            </section>
+
+            <section>
+                <h2>CODE DEMO!</h2>
+            </section>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.min.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
+</body>
+
+</html>
